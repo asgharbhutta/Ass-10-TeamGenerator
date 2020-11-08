@@ -8,12 +8,12 @@ const generateTeam = team => {
         <div class="card employee-card">
         <div class="card-header">
             <h2 class="card-title">${manager.getName()}</h2>
-            <h3 class="card-title"></h3>
+            <h3 class="card-title">${manager.getRole()}</h3>
         </div>
         <div class="card-body">
             <ul class="list-group">
                 <li class="list-group-item">ID: ${manager.getId()}</li>
-                <li class="list-group-item">Email: ${manager.geEmail()}</li>
+                <li class="list-group-item">Email: ${manager.getEmail()}</li>
                 <li class="list-group-item">Office Number: ${manager.getOfficeNumber()}</li>
             <ul>
         </div>
@@ -31,8 +31,8 @@ const generateTeam = team => {
         <div class="card-body">
             <ul class="list-group">
                 <li class="list-group-item">ID: ${engineer.getId()}</li>
-                <li class="list-group-item">Email: ${manager.geEmail()}</li>
-                <li class="list-group-item">Github: <a href="https://github.com/${manager.github()}"></a></li>
+                <li class="list-group-item">Email: ${engineer.getEmail()}</li>
+                <li class="list-group-item">Github: <a href="https://github.com/${engineer.getGithub()}">${engineer.getGithub()}</a></li>
             <ul>
         </div>
     </div>
@@ -48,8 +48,8 @@ const generateTeam = team => {
         </div>
         <div class="card-body">
             <ul class="list-group">
-                <li class="list-group-item">ID: {{ id }}</li>
-                <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</li>
+                <li class="list-group-item">ID: ${intern.getId()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
                 <li class="list-group-item">School: ${intern.getSchool()}</li>
             <ul>
         </div>

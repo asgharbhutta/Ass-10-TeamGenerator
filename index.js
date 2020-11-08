@@ -85,9 +85,14 @@ function appMenu(){
                 type: "input",
                 name: "engineerEmail",
                 message: "What is your engineers email?",
+            },
+            {
+                type: "input",
+                name: "engineerGithub",
+                message: "What is your engineers github?",
             }
         ]).then(answers => {
-            const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail)
+            const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub)
             teamMembers.push(engineer);
             idArray.push(answers.engineerId);
             createTeam();
